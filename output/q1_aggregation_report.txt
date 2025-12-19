@@ -1,0 +1,44 @@
+Q1 Aggregation Report
+=====================
+
+Question 1: GroupBy aggregation and transform operations
+----------------------------------------------------------
+This report summarizes facility-level aggregations created using
+pandas groupby().transform() operations.
+
+Columns added:
+- facility_mean_years_experience (mean years_experience per facility)
+- facility_std_years_experience (std dev of years_experience per facility)
+- years_experience_zscore (z-score within facility)
+- facility_total_service_charge (sum of service_charge per facility)
+
+Summary statistics for years_experience:
+----------------------------------------
+count    5000.000000
+mean       19.927000
+std        10.983269
+min         1.000000
+25%        11.000000
+50%        20.000000
+75%        29.000000
+max        39.000000
+
+Summary statistics for facility_mean_years_experience:
+-------------------------------------------------------
+count    5000.000000
+mean       19.927000
+std         0.429275
+min        19.319728
+25%        19.563008
+50%        20.102970
+75%        20.160784
+max        20.778182
+
+Sample transformed rows:
+-------------------------
+facility_id  years_experience  facility_mean_years_experience  facility_std_years_experience  years_experience_zscore  facility_total_service_charge
+     FAC004                11                       20.137014                      10.581439                -0.863495                      297283.06
+     FAC001                19                       19.563008                      10.702137                -0.052607                      295508.13
+     FAC001                 3                       19.563008                      10.702137                -1.547636                      295508.13
+     FAC004                 6                       20.137014                      10.581439                -1.336020                      297283.06
+     FAC003                36                       20.209205                      11.575935                 1.364105                      316284.98
